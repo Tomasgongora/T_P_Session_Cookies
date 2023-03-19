@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Session</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body> 
+    <main>
+      
+      <% if (locals.user) { %>
+        <style>
+          body{
+            background-color: <%= locals.user.color%>;
+          }
+        </style>
+        <h1><%= locals.user.name %>,Muchas gracias! </h1>
+        <a href="/">Volver</a>
+        <form action="" method="post">
+          <button type="submit">Olvidar el color</button>
+        </form>
+     <% } %> 
+    </main>
+  </body>
+</html>
